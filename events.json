@@ -1,0 +1,34 @@
+[
+  {
+    "repository": "microsoft/vscode",
+    "description": "Visual Studio Code is a lightweight but powerful source code editor.",
+    "language": "TypeScript",
+    "stars": 171000,
+    "starredAt": "2026-09-18",
+    "url": "https://github.com/microsoft/vscode"
+  },
+  {
+    "repository": "vercel/next.js",
+    "description": "The React framework for the web, with all the tools you need for production.",
+    "language": "JavaScript",
+    "stars": 132000,
+    "starredAt": "2026-09-12",
+    "url": "https://github.com/vercel/next.js"
+  },
+  {
+    "repository": "astral-sh/ruff",
+    "description": "An extremely fast Python linter and code formatter, written in Rust.",
+    "language": "Rust",
+    "stars": 48000,
+    "starredAt": "2026-09-04",
+    "url": "https://github.com/astral-sh/ruff"
+  },
+  {
+    "repository": "sindresorhus/awesome",
+    "description": "A curated list of awesome lists, covering tools, languages, and ideas.",
+    "language": "Markdown",
+    "stars": 390000,
+    "starredAt": "2026-08-27",
+    "url": "https://github.com/sindresorhus/awesome"
+  }
+]
