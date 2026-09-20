@@ -1,0 +1,193 @@
+:root {
+  color-scheme: light;
+  --ink: #17212b;
+  --muted: #687582;
+  --line: #dce4e8;
+  --paper: #f7f9f8;
+  --card: #ffffff;
+  --accent: #0d7c66;
+  --accent-soft: #dff2eb;
+  --yellow: #e4a11b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.page-shell {
+  width: min(100% - 40px, 860px);
+  margin: 0 auto;
+  padding: 72px 0 96px;
+}
+
+.page-header {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 38px;
+}
+
+.eyebrow {
+  margin: 0 0 14px;
+  color: var(--accent);
+  font: 700 0.76rem/1.2 Arial, sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: 620px;
+  margin-bottom: 14px;
+  font-size: clamp(2.8rem, 8vw, 5.5rem);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+}
+
+.intro {
+  max-width: 500px;
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+.list-section {
+  padding-top: 38px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+h2 {
+  margin-bottom: 0;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.count {
+  color: var(--muted);
+  font: 0.78rem Arial, sans-serif;
+  white-space: nowrap;
+}
+
+.repository-list {
+  display: grid;
+  gap: 12px;
+}
+
+.repository-card {
+  padding: 25px 28px 23px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--card);
+  box-shadow: 0 8px 24px rgba(23, 33, 43, 0.04);
+  animation: appear 420ms ease both;
+}
+
+.repository-card:nth-child(2) { animation-delay: 60ms; }
+.repository-card:nth-child(3) { animation-delay: 120ms; }
+.repository-card:nth-child(4) { animation-delay: 180ms; }
+
+.card-topline,
+.repository-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+  font: 0.75rem Arial, sans-serif;
+}
+
+.card-topline {
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.repo-mark {
+  color: var(--yellow);
+  font-size: 1.1rem;
+}
+
+h3 {
+  margin-bottom: 8px;
+  font-size: 1.35rem;
+  font-weight: 400;
+}
+
+h3 a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.repository-card p {
+  max-width: 680px;
+  margin-bottom: 20px;
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+.repository-meta {
+  gap: 20px;
+}
+
+.language-dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin-right: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.status {
+  margin: 0;
+  padding: 24px 0;
+  color: var(--muted);
+  font: 0.9rem Arial, sans-serif;
+}
+
+.status-error {
+  color: #a3483f;
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 560px) {
+  .page-shell {
+    width: min(100% - 28px, 860px);
+    padding-top: 44px;
+  }
+
+  .repository-card {
+    padding: 21px 20px 19px;
+  }
+
+  .card-topline,
+  .repository-meta {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+}
